@@ -11,6 +11,9 @@ class Dog {
     bark() {
         console.log(`Gau Gau Gau`);
     }
+    makeSound() {
+        console.log(`${this.name} says Woof`);
+    }
 }
 exports.Dog = Dog;
 class Cat {
@@ -19,6 +22,9 @@ class Cat {
     }
     sound() {
         this.meow();
+    }
+    makeSound() {
+        console.log(`${this.name} says Meow`);
     }
     meow() {
         console.log(`Meo Meo Meo`);

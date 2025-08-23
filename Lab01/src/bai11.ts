@@ -11,8 +11,13 @@ export class Dog implements Animal{
         this.bark()
     }
 
+
     bark(): void{
         console.log(`Gau Gau Gau`)
+    }
+
+    makeSound(): void {
+        console.log(`${this.name} says Woof`)
     }
 
 }
@@ -26,6 +31,10 @@ export class Cat implements Animal{
 
     sound(): void {
         this.meow()
+    }
+
+    makeSound(): void {
+        console.log(`${this.name} says Meow`)
     }
 
     meow(): void{

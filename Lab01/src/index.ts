@@ -6,7 +6,22 @@ import { BankAccount } from "./bai5";
 import { User } from "./bai7";
 import { Product } from "./bai8";
 import {Cat,Dog} from "./bai11"
-  
+import { Birds,Fish } from "./bai12";
+import { Square,Cricle } from "./bai13";
+import { Manager,Developer } from "./bai14";
+import { Library } from "./bai15";
+import { Book } from "./bai6";
+import { Box } from "./bai16";
+import { Logger } from "./bai17";
+import { MathUtil } from "./bai18";
+import { Car1, Bike } from "./bai20";
+import { Repository } from "./bai21";
+import { Stack } from "./bai22";
+import { CardPayment,CashPayment } from "./bai23";
+import { Fan,AirConditioner } from "./bai24";
+import { Shape1 } from "./bai25";
+
+
 //Bai 1
 
 console.log("---------------Bai 1-----------------")
@@ -75,4 +90,141 @@ const dog = new Dog("TDui");
 
 cat.meow();
 dog.bark();
+
+//Bai 12 :
+console.log("---------------Bai 12-----------------")
+const fish = new Fish("Ca Chep")
+const bird = new Birds("Chim Cu");
+
+fish.swim();
+bird.fly();
+
+//Bai 13 :
+console.log("---------------Bai 13-----------------")
+const square = new Square(4);
+const cricle = new Cricle(3);
+
+console.log(square.area());
+console.log(cricle.area());
+
+//Bai 14 :
+console.log("---------------Bai 14-----------------")
+const manager = new Manager("Duy","Lead")
+const dev = new Developer("NDuy","ReactNative");
+
+manager.manageTask();
+dev.code();
+
+//Bai 15 :
+console.log("---------------Bai 15-----------------")
+const library = new Library();
+
+library.addBook(new Book("React","Duy",2004))
+library.getBook()
+
+//Bai 16 :
+console.log("---------------Bai 16-----------------")
+const number = new Box<number>(123)
+
+console.log(number.getValue());
+
+const number1 = new Box<string>("Duy")
+
+console.log(number1.getValue());
+
+//Bai 17 :
+console.log("---------------Bai 17-----------------")
+const logger = Logger.getInstance();
+
+logger.log("Loi")
+
+
+//Bai 18 :
+console.log("---------------Bai 18-----------------")
+console.log(MathUtil.add(5, 3));       // 8
+console.log(MathUtil.subtract(10, 4)); // 6
+console.log(MathUtil.multiply(6, 7));  // 42
+console.log(MathUtil.divide(20, 5));   // 4
+
+
+
+//Bai 19 :
+console.log("---------------Bai 19-----------------")
+
+const cat1 = new Cat("LuBU");
+const dog1 = new Dog("TV");
+
+cat1.makeSound()
+dog1.makeSound();
+
+//Bai 20 :
+console.log("---------------Bai 20-----------------")
+
+const car1 = new Car1("Toyota",100)
+const bike = new Bike("ThongNhat",5);
+
+console.log(car1.getInfo());
+console.log(bike.getInfo());
+
+//Bai 21:
+console.log("---------------Bai 21-----------------")
+const numberRepo = new Repository<number>();
+numberRepo.add(10);
+numberRepo.add(20);
+console.log(numberRepo.getAll()); 
+
+const stringRepo = new Repository<string>();
+stringRepo.add("Hello");
+stringRepo.add("World");
+console.log(stringRepo.getAll()); 
+
+
+//Bai 22:
+console.log("---------------Bai 22-----------------")
+const numberStack = new Stack<number>();
+numberStack.push(10);
+numberStack.push(20);
+numberStack.push(30);
+
+console.log(numberStack.peek()); // 30
+console.log(numberStack.pop());  // 30
+console.log(numberStack.peek()); // 20
+console.log(numberStack.isEmpty()); // false
+
+// Stack rỗng
+const stringStack = new Stack<string>();
+console.log(stringStack.isEmpty()); // true
+stringStack.push("Hello");
+stringStack.push("World");
+console.log(stringStack.pop()); // "World"
+console.log(stringStack.peek()); // "Hello"
+
+
+
+//Bai 23:
+console.log("---------------Bai 23-----------------")
+const cash = new CashPayment();
+cash.pay(100);
+
+const card = new CardPayment("1234-5678-9876-5432");
+card.pay(250); 
+
+
+//Bai 24:
+console.log("---------------Bai 24-----------------")
+const fan = new Fan();
+const airConditioner = new AirConditioner();
+
+fan.turnOn()
+airConditioner.turnOn()
+
+//Bai 25:
+
+console.log("---------------Bai 25-----------------")
+
+Shape1.describe();
+
+
+
+
 
