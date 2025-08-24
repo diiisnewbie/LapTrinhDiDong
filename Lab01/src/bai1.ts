@@ -11,4 +11,12 @@ export class Person{
         console.log(`Name : ${this.name}, Age : ${this.age}`);
     }
 
+    getName() : string{
+        return this.name;
+    }
+
+    getAge() : number{
+        return this.age;
+    }
+
 }

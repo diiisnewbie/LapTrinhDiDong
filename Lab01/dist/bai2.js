@@ -7,6 +7,9 @@ class Student extends bai1_1.Person {
         super(name, age);
         this.grade = grade;
     }
+    getGrade() {
+        return this.grade;
+    }
     display() {
         super.display();
         console.log(`Grade: ${this.grade}`);

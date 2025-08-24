@@ -8,6 +8,10 @@ export class Student extends Person{
         this.grade = grade;
     }
 
+    getGrade():number{
+        return this.grade;
+    }
+
     public display():void{
         super.display();
         console.log(`Grade: ${this.grade}`)

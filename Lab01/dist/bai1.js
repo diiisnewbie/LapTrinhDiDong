@@ -9,5 +9,11 @@ class Person {
     display() {
         console.log(`Name : ${this.name}, Age : ${this.age}`);
     }
+    getName() {
+        return this.name;
+    }
+    getAge() {
+        return this.age;
+    }
 }
 exports.Person = Person;
