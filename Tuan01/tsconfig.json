@@ -4,10 +4,10 @@
     "module": "commonjs", /* Sử dụng module CommonJS */
     "strict": true, /* Bật kiểm tra strict */
     "esModuleInterop": true, /* Hỗ trợ import/export ES Modules */
-    "outDir": "Lab01/dist", /* Thư mục chứa các tệp JavaScript đã biên dịch */
-    "rootDir": "Lab01/src", /* Thư mục gốc chứa tệp TypeScript */
+    "outDir": "./dist", /* Thư mục chứa các tệp JavaScript đã biên dịch */
+    "rootDir": "./src", /* Thư mục gốc chứa tệp TypeScript */
     "skipLibCheck": true /* Bỏ qua kiểm tra các tệp khai báo thư viện */
   },
-  "include": ["Lab01/src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
