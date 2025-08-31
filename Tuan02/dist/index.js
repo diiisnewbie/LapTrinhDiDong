@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const bai10_1 = require("./bai10");
+const bai30_1 = require("./bai30");
 // //Bài 01:
 // myPromise.then((message) => console.log(message))
 //Bài 02:
@@ -48,9 +48,49 @@ const bai10_1 = require("./bai10");
 //Bài 09:
 // filterEvenNumber([1,2,3,4,5,6,7]).then((arrEvenNumber) => console.log(arrEvenNumber))
 //Bài 10:
-(0, bai10_1.task)(true).then((result) => console.log(result))
-    .catch((err) => console.error(err))
-    .finally(() => console.log("Done"));
-(0, bai10_1.task)(false).then((result) => console.log(result))
-    .catch((err) => console.error(err))
-    .finally(() => console.log("Done"));
+// task(true).then((result) => console.log(result))
+//             .catch((err) => console.error(err))
+//             .finally(() =>console.log("Done"))
+// task(false).then((result) => console.log(result))
+//             .catch((err) => console.error(err))
+//             .finally(() =>console.log("Done"))
+//Bài 11:
+// helloAsyncAwait().then(console.log)
+//Bài 12:
+// runTask()
+//Bài 13:
+// runTask13()
+//Bài 14:
+// multiplyAfterDelay(2).then(console.log)
+//Bài 15:
+// sequentialCalls()
+//Bài 16:
+// parallelCalls()
+//Bài 17:
+// iteratePromises()
+//Bài 18:
+// fetchUser(1).then(console.log)
+//Bài 19:
+// fetchUsers([1,2,3,4]).then(console.log)
+//Bài 20:
+// fetchUserWithTimeout(5).then(console.log)
+//Bài 21:
+// getTodo()
+//Bài 22:
+// getMultipleTodos()
+//Bài 23:
+// getCompletedTodos()
+//Bài 24:
+// postData()
+//Bài 25:
+// downloadFile()
+//Bài 26:
+// wait5Seconds()
+//Bài 27:
+// fetchWithRetry("ád",1)
+//Bài 28:
+// batchProcess()
+//Bài 29:
+// queueProcess()
+//Bài 30:
+(0, bai30_1.testAllSettled)();
