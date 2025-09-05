@@ -7,32 +7,32 @@ import { Card } from 'react-native-paper';
 
 import Circle from '../components/Circle.js';
 
-export default function Screen3() {
+export default function Screen4() {
   return (
     <LinearGradient colors={['#e0ffff','rgba(55, 214, 248, 1)']} locations={[0.7, 1]}  style={styles.container}>
       <View style={styles.container}>
       <View style={{ flex: 3 ,justifyContent:'center'}}>
-        <Image source={require('../assets/lock.png')}
-          style={{width:140,height:140}}
-        >
-
-        </Image>
+        <Text style={{fontSize:60,fontWeight:'bold'}}>CODE</Text>
       </View>
       <View style={{ flex: 1, alignItems: 'center', width: 189 }}>
         <Text style={{ fontWeight: 700, fontSize: 25, textAlign: 'center' }}>
-          FORGET PASSWORD
+          VERIFICATION
         </Text>
       </View>
       <View style={{ flex: 2, alignItems: 'center', width: 302 }}>
         <Text style={{ fontWeight: 700, textAlign: 'center', fontSize: 15 }}>
-          Provide your account's email for which you want to reset your password
+          Enter ontime password send on ++849092605798
         </Text>
-        <View style={{flex:1,flexDirection:'row'}}>
-          <Ionicons name="mail-outline" size={20} style={{alignContent:'center',height:88,position:"absolute",marginLeft:10}} color="black" />
-          <TextInput style={{width:305,height:45, borderWidth:3, marginTop:20,paddingHorizontal:30, backgroundColor:'#d3d3d3'}} placeholder="Email"/>
+        <View style={{flex:1,flexDirection:'row',marginTop:20}}>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
+          <View style={{width:50,height:50,borderWidth:3}}></View>
         </View>
         <View style={{flex:1}}>
-          <Pressable style={{backgroundColor:'#ffd700',width:305,height:45,justifyContent:'center',alignItems:'center',fontSize:18,fontWeight:'bold'}}>NEXT</Pressable>
+          <Pressable style={{backgroundColor:'#ffd700',width:305,height:45,justifyContent:'center',alignItems:'center',fontSize:18,fontWeight:'bold'}}>VERIFY CODE</Pressable>
         </View>
       </View>
     </View>
