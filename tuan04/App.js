@@ -3,13 +3,15 @@ import { StyleSheet, Text, View } from 'react-native';
 
 // or any files within the Snack
 import CartScreen from "./components/CartScreen,js"
-import Part1 from "./components/Part1.js"
+import Login from "./components/Login"
+import Review from "./components/Review"
+import PasswordGenerator from "./components/PasswordGenerator"
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <Part1/>
+      <PasswordGenerator/>
     </View>
   );
 }
