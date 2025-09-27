@@ -8,17 +8,17 @@ import PickColor from "./screens/PickColor"
 // or any files within the Snack
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator()
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Bai1 from "./components/Bai1"
+import Bai3 from "./components/Bai3"
+import Bai4 from "./components/Bai4"
+import Bai5 from "./components/Bai5"
 export default function App() {
+  
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Detail" component={DetailScreen} />
-        <Stack.Screen name="PickColor" component={PickColor} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Bai5/>
   );
 }
 
