@@ -8,6 +8,7 @@ import { Card } from 'react-native-paper';
 // or any files within the Snack
 import HomeScreen from './screens/HomeScreen';
 import ListScreen from "./screens/ListScreen"
+import DetailScreen from "./screens/DetailScreen"
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="List" component={ListScreen} />
+        <Stack.Screen name="Detail" component={DetailScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

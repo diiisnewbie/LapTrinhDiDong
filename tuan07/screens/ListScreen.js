@@ -5,34 +5,39 @@ import {
   Image,
   Pressable,
   FlatList,
+  ScrollView,
 } from 'react-native';
-import { useState ,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 // You can import supported modules from npm
 import { Card } from 'react-native-paper';
-import Item from "../components/Item"
+import Item from '../components/Item';
 import axios from 'axios';
 // or any files within the Snack
 
 export default function ListScreen({ navigation }) {
   const [selected, setSelected] = useState('All');
-  const filters = ['All', 'RoadBike', 'Mountain'];
+  const filters = ['All', 'Roadbike', 'Mountain'];
   const [bikes, setBikes] = useState([]);
-  
+
   const apiUrl = 'https://68ddc568d7b591b4b78d5cfe.mockapi.io/vehicles';
 
   useEffect(() => {
-  axios.get(apiUrl)
-    .then(response => {
-      setBikes(response.data);
-    })
-    .catch(error => {
-      console.error('Lỗi khi gọi API:', error);
-    });
-}, []); 
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setBikes(response.data);
+      })
+      .catch((error) => {
+        console.error('Lỗi khi gọi API:', error);
+      });
+  }, []);
 
+  const filteredData =
+    selected === 'All'
+      ? bikes
+      : bikes.filter((item) => item.category === selected);
 
-  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>The world's Best Bike</Text>
@@ -49,18 +54,17 @@ export default function ListScreen({ navigation }) {
         ))}
       </View>
       <View>
-        <FlatList
-          data={bikes.slice(0,4)}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <Item
-              name={item.name}
-              price={item.price}
-            />
-          )}
-          numColumns={2}
-          contentContainerStyle={{ padding: 10 }}
-        />
+        <ScrollView style={styles.filterContainer}>
+          <FlatList
+            data={filteredData.slice(0,4)}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <Item name={item.name} price={item.price} />
+            )}
+            numColumns={2}
+            contentContainerStyle={{ padding: 10 }}
+          />
+        </ScrollView>
       </View>
     </View>
   );
@@ -102,4 +106,9 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
   },
+  filterContainer: {
+    width: '100%',
+    backgroundColor: "#f5f5f5",
+    flex:1
+  }
 });
